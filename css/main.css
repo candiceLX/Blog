@@ -1849,7 +1849,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b81dc7;
+  background: #96ffac;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2820,5 +2820,10 @@ hr {
   .footer-inner {
     width: auto;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  #live2dcanvas {
+    width: 100px;
   }
 }
