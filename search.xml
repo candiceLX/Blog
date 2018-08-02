@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[coding-hexo-next博客搭建]]></title>
+    <title><![CDATA[coding-hexo-next]]></title>
     <url>%2F2018%2F08%2F01%2Fcoding-hexo-next%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[前言 Hexo是一款基于Node.js的静态博客框架 可以生成静态网页托管在GitHub上面 就省去了买服务器了 博客文章是用MarkDown语法编写的,对开发者非常友好 也不怕数据库被删了Hexo GitHub上面的项目是开源的 总觉得有点怪 于是在coding上建一个私有项目coding 然后需要一个域名 一是为了美观 二是coding提供的URL在微信是打不开的 主题用的是Next 最多人用所以查个文档很方便 功能也很完善Next 搭建 需要安装 这两货不多说 Node.js 和 Git 执行命令安装Hexo $ npm install -g hexo-cli 安装完Hexo后 尝试一下 新建-进入目录-安装依赖-打开 $ hexo init $ cd &lt;try&gt; $ npm install $ hexo s 主题常用命令添加点元素]]></content>
+      <categories>
+        <category>花里胡俏</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[md语法]]></title>
