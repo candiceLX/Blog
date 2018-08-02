@@ -10,9 +10,14 @@
 
   function o() {
     var t = "function" == typeof e.onclick && e.onclick;
-    e.onclick = function (e) {
-      console.log(123)
-      t && t(), i(e)
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      e.addEventListener('touchend', function (e) {
+        t && t(), i(e)
+      }, false)
+    } else {
+      e.addEventListener('click', function (e) {
+        t && t(), i(e)
+      }, false)
     }
   }
 
