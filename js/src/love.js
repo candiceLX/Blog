@@ -10,21 +10,25 @@
 
   function o() {
     var t = "function" == typeof e.onclick && e.onclick;
-    e.onclick = function (e) {
+
+    e.onclick = e.ontouchstart = function (e) {
       t && t(), i(e)
     }
   }
 
   function i(e) {
     var a = t.createElement("div");
+
     a.className = "heart", d.push({
       el: a,
-      x: e.clientX - 5,
-      y: e.clientY - 5,
+      x: e.clientX || e.touches[0].clientX - 5,
+      y: e.clientY || e.touches[0].clientY - 5,
       scale: 1,
       alpha: 1,
       color: s()
     }), t.body.appendChild(a)
+    console.log(a);
+
   }
 
   function c(e) {
