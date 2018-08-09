@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[coding-hexo-next]]></title>
-    <url>%2F2018%2F08%2F02%2Fcoding-hexo-next%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%2F</url>
-    <content type="text"><![CDATA[前言 Hexo是一款基于Node.js的静态博客框架 可以生成静态网页托管在GitHub上面 就省去了买服务器了 博客文章是用MarkDown语法编写的,对开发者非常友好 也不怕数据库被删了Hexo GitHub上面的项目是开源的 总觉得有点怪 于是在coding上建一个私有项目coding 然后需要一个域名 一是为了美观 二是coding提供的URL在微信是打不开的 主题用的是Next 最多人用所以查个文档很方便 功能也很完善Next 搭建 需要安装 这两货不多说 Node.js 和 Git 执行命令安装Hexo $ npm install -g hexo-cli 安装完Hexo后 尝试一下 新建-进入目录-安装依赖-打开 $ hexo init &lt;folder>$ cd &lt;folder>$ npm install$ hexo s 基本配置 参数/描述 官方文档都有 我挑几个会出错的说一下 language/网站使用的语言 设置了不生效的话 可以看看主题里面的language文件都支持哪些文件是怎么命名的url 没有配域名的情况下用coding提供的网址 配了域名就改成自己的root/网址根目录 如何网址被放入子目录中如http://0li.xin/blog 那么root设为 /blog/ 否则直接 / 就可以了theme: Next 设置你想要的主题 主题 Next本来看上了一个其他的主题 但是很容易看腻也没文档什么的 还是向现实妥协 首先进入站点目录下 安装主题 $ git clone https://github.com/iissnan/hexo-theme-next themes/next 到站点配置文件config.yml 启用主题 theme: next 运行看看没毛病我们就设置菜单了 对应字段是menu 我只开启了标签 分类 和归档 menu:home: / || hometags: /tags/ || tagscategories: /categories/ || tharchives: /archives/ || archive 主题中不同的外观scheme 我用的是 scheme: Mist 如果要自定义样式需要去到/Blog/themes/next/source/css/_schemes 目录下修改css 常用命令 新建一个网站 $ hexo init [folder]新建一篇文章 $ hexo new &lt;title>生成静态文件 $ hexo g启动服务器。默认网址为：http://localhost:4000/ $ hexo s部署网站。$ hexo deploy提示常用命令 $ hexo _help清除缓存文件 $ hexo clean列出网站资料。 $ hexo list &lt;type>显示 Hexo 版本。 $ hexo version 添加点元素简书有篇文总结的不错地址 腾讯公益404页面 新建 404.html 页面，放到博客或者主题的 source 目录下，内容如下：12345678910111213141516171819&lt;!DOCTYPE HTML&gt;&lt;html&gt;&lt;head&gt; &lt;meta http-equiv="content-type" content="text/html;charset=utf-8;" /&gt; &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /&gt; &lt;meta name="robots" content="all" /&gt; &lt;meta name="robots" content="index,follow" /&gt; &lt;link rel="stylesheet" type="text/css" href="https://qzone.qq.com/gy/404/style/404style.css"&gt;&lt;/head&gt;&lt;body&gt; &lt;script type="text/plain" src="http://www.qq.com/404/search_children.js" charset="utf-8" homePageUrl="/" homePageName="回到我的主页"&gt; &lt;/script&gt; &lt;script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"&gt;&lt;/script&gt; &lt;script src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 给页面加点小星星然后下面的代码copy一下，新建love.js文件并且将代码复制进去，然后保存。将love.js文件放到路径/themes/next/source/js/src里面，然后打开\themes\next\layout_layout.swig文件,在末尾（在前面引用会出现找不到的bug）添加以下代码：1&lt;script type="text/javascript" src="/js/src/love.js"&gt;&lt;/script&gt; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354! function (e, t, a) &#123; function n() &#123; c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;), o(), r() &#125; function r() &#123; for (var e = 0; e &lt; d.length; e++) d[e].alpha &lt;= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y--, d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = &quot;left:&quot; + d[e].x + &quot;px;top:&quot; + d[e].y + &quot;px;opacity:&quot; + d[e].alpha + &quot;;transform:scale(&quot; + d[e].scale + &quot;,&quot; + d[e].scale + &quot;) rotate(45deg);background:&quot; + d[e].color + &quot;;z-index:99999&quot;); requestAnimationFrame(r) &#125; function o() &#123; var t = &quot;function&quot; == typeof e.onclick &amp;&amp; e.onclick; e.onclick = e.ontouchstart = function (e) &#123; t &amp;&amp; t(), i(e) &#125; &#125; function i(e) &#123; var a = t.createElement(&quot;div&quot;); a.className = &quot;heart&quot;, d.push(&#123; el: a, x: e.clientX || e.touches[0].clientX - 5, y: e.clientY || e.touches[0].clientY - 5, scale: 1, alpha: 1, color: s() &#125;), t.body.appendChild(a) console.log(a); &#125; function c(e) &#123; var a = t.createElement(&quot;style&quot;); a.type = &quot;text/css&quot;; try &#123; a.appendChild(t.createTextNode(e)) &#125; catch (t) &#123; a.styleSheet.cssText = e &#125; t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a) &#125; function s() &#123; return &quot;rgb(&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;)&quot; &#125; var d = []; e.requestAnimationFrame = function () &#123; return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) &#123; setTimeout(e, 1e3 / 60) &#125; &#125;(), n()&#125;(window, document);]]></content>
+    <title><![CDATA[MyMyMy]]></title>
+    <url>%2F2018%2F08%2F09%2FMyMyMy%2F</url>
+    <content type="text"><![CDATA[eolinkerhttp://adv.wavehk.cn/#/indexcandice *** githttp://120.79.145.200:10101/q1*6 Teambitionhttps://www.teambition.com/projects 波浪客服号2653606273bolang8*6 服务器地址 (使用普通的ftp)119.23.18.146wavehk_cn 官网ftpYPKAz3nspf5ZMR2wh_wavehk_cn 活动ftprXrasR5tENyBTWPs 香港服务器47.75.183.6wavehk_comiDK4a4A8wMdKM7Hf 新买的广告服务器IP 47.106.67.81账号 wavehk密码 bolang访问 adv.wavehk.cn 友盟账号 dev@wavehk.cn密码 Bolang2018 百度统计账号 devwavehk密码 Bolang2018 企业订阅号：13711224826@163.com密码：bolang8888 小程序注册邮箱登录入口 https://exmail.qq.com/manage@wavehk.com密码Hackyh123 服务器ip 120.78.204.56 Administrator Sing2017 远程连接密码463052内部访问数据库http://localhost/phpmyadmin/index.php root root 博客 http://localhost/lx/wp-admin 后台登陆账号qq邮箱 密码Lx1WordPress站点名字LX 账户root 密码%gVOIo&amp;!uwRrf2m##V http://www.0li.xin/]]></content>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[闻之]]></title>
+    <url>%2F2018%2F08%2F09%2Fhhw%2F</url>
+    <content type="text"><![CDATA[QQ： 948867319 ***lx 码云 948867319@qq.com ### 名字shineW github 948867319@qq.com ### 名字ShineW6 蓝湖 948867319@qq.com ### 名字ShineW 可微信扫一扫登录 hhw6688]]></content>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[workFile2]]></title>
+    <url>%2F2018%2F02%2F09%2FworkFile2%2F</url>
+    <content type="text"><![CDATA[前言广告页 活动页 小程序图片 全部放广告服务器 广告服务器地址 (使用普通的ftp)IP 47.106.67.81账号 wavehk 密码 bolang访问 adv.wavehk.cn 地址推广页 跟随送钱https://adv.wavehk.cn/earnings/?a=baofeng6 注册引流页https://adv.wavehk.cn/registerPage PC论坛页https://adv.wavehk.cn/pcEA]]></content>
+      <categories>
+        <category>工作我是认真的</category>
+      </categories>
+      <tags>
+        <tag>工作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[workFile]]></title>
+    <url>%2F2018%2F02%2F02%2FworkFile%2F</url>
+    <content type="text"><![CDATA[前言APP内嵌页 全部放大陆主机 用https访问以前的是在h的文件夹里面 以后都放在h/appIn里面 大陆服务器地址 (使用普通的ftp) 访问 www.wavehk.cn119.23.18.146wavehk_cn 官网ftpYPKAz3nspf5ZMR2wh_wavehk_cn 活动ftprXrasR5tENyBTWPs 地址新手88 https://h.wavehk.cn/newUser88/ai智能 https://h.wavehk.cn/appIn/aiRobot跟单送钱 https://h.wavehk.cn/documentary支付页面 https://h.wavehk.cn/payPage文章详情 https://h.wavehk.cn/article/?id=分享收益 https://h.wavehk.cn/analystS?tokein=分享分析师 https://h.wavehk.cn/essayS?AnalystId资讯详情 https://h.wavehk.cn/appIn/article?article_id= 新手指导 https://wavehk.cn/guide/welcome.html模拟账户 https://wavehk.cn/guide/demo.html产品简介 https://wavehk.cn/guide/follow.html关于注册 https://wavehk.cn/guide/investor.html风险声明 https://wavehk.cn/protocol/risk.html客户协议 https://wavehk.cn/protocol/client.html法律声明 https://wavehk.cn/protocol/law.html交易规则 https://wavehk.cn/protocol/rule.html 马拉松活动 https://h.wavehk.cn/appIn/marathon香港情 https://h.wavehk.cn/appIn/hkFeelingsMT5专题页]]></content>
+      <categories>
+        <category>工作我是认真的</category>
+      </categories>
+      <tags>
+        <tag>工作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[md语法]]></title>
+    <url>%2F2018%2F01%2F02%2Fmd%E5%8D%B3Markdown%20%E8%AF%AD%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[前言Markdown 是一种轻量级的「标记语言」非常简单十分轻量所有的标签后面空一格再写内容 这是标准的md语法 不然可能会报鬼错接下来我介绍一下常用的几个标签 然后就没有然后了~ 常用的标签标题标签 #一级标题 ##二级标题 以此类推 一共有六级标题 列表 *这是无序列表 🌰 1.这是有序列表 🌰 引用&gt; 就像这样 分割线***或者-或者_ 插入代码前三个`后也是三个```` html/javascript/css 这里面就是插入的代码啦``` 插入链接链接为： [百度](www.baidu.com\) 插入图片图片为：![]()]]></content>
       <categories>
         <category>花里胡俏</category>
       </categories>
@@ -12,14 +50,31 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[md语法]]></title>
-    <url>%2F2018%2F08%2F02%2Fmd%E5%8D%B3Markdown%20%E8%AF%AD%E6%B3%95%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[魑魅]]></title>
+    <url>%2F2018%2F01%2F02%2FancientPoetry%2F</url>
+    <content type="text"><![CDATA[回首向来萧瑟处,归去,也无风雨也无晴 且君子之交淡如水，小人之交甘若醴]]></content>
+      <categories>
+        <category>花里胡俏</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[coding-hexo-next]]></title>
+    <url>%2F2018%2F01%2F02%2Fcoding-hexo-next%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[前言 Hexo是一款基于Node.js的静态博客框架 可以生成静态网页托管在GitHub上面 就省去了买服务器了 博客文章是用MarkDown语法编写的,对开发者非常友好 也不怕数据库被删了Hexo GitHub上面的项目是开源的 总觉得有点怪 于是在coding上建一个私有项目coding 然后需要一个域名 一是为了美观 二是coding提供的URL在微信是打不开的 主题用的是Next 最多人用所以查个文档很方便 功能也很完善Next 搭建 需要安装 这两货不多说 Node.js 和 Git 执行命令安装Hexo $ npm install -g hexo-cli 安装完Hexo后 尝试一下 新建-进入目录-安装依赖-打开 $ hexo init &lt;folder>$ cd &lt;folder>$ npm install$ hexo s 基本配置 参数/描述 官方文档都有 我挑几个会出错的说一下 language/网站使用的语言 设置了不生效的话 可以看看主题里面的language文件都支持哪些文件是怎么命名的url 没有配域名的情况下用coding提供的网址 配了域名就改成自己的root/网址根目录 如何网址被放入子目录中如http://0li.xin/blog 那么root设为 /blog/ 否则直接 / 就可以了theme: Next 设置你想要的主题 主题 Next本来看上了一个其他的主题 但是很容易看腻也没文档什么的 还是向现实妥协 首先进入站点目录下 安装主题 $ git clone https://github.com/iissnan/hexo-theme-next themes/next 到站点配置文件config.yml 启用主题 theme: next 运行看看没毛病我们就设置菜单了 对应字段是menu 我只开启了标签 分类 和归档 menu:home: / || hometags: /tags/ || tagscategories: /categories/ || tharchives: /archives/ || archive 主题中不同的外观scheme 我用的是 scheme: Mist 如果要自定义样式需要去到/Blog/themes/next/source/css/_schemes 目录下修改css 常用命令 新建一个网站 $ hexo init [folder]新建一篇文章 $ hexo new &lt;title>生成静态文件 $ hexo g启动服务器。默认网址为：http://localhost:4000/ $ hexo s部署网站。$ hexo deploy提示常用命令 $ hexo _help清除缓存文件 $ hexo clean列出网站资料。 $ hexo list &lt;type>显示 Hexo 版本。 $ hexo version 添加点元素简书有篇文总结的不错地址 腾讯公益404页面 新建 404.html 页面，放到博客或者主题的 source 目录下，内容如下：12345678910111213141516171819&lt;!DOCTYPE HTML&gt;&lt;html&gt;&lt;head&gt; &lt;meta http-equiv="content-type" content="text/html;charset=utf-8;" /&gt; &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /&gt; &lt;meta name="robots" content="all" /&gt; &lt;meta name="robots" content="index,follow" /&gt; &lt;link rel="stylesheet" type="text/css" href="https://qzone.qq.com/gy/404/style/404style.css"&gt;&lt;/head&gt;&lt;body&gt; &lt;script type="text/plain" src="http://www.qq.com/404/search_children.js" charset="utf-8" homePageUrl="/" homePageName="回到我的主页"&gt; &lt;/script&gt; &lt;script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"&gt;&lt;/script&gt; &lt;script src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 给页面加点小星星然后下面的代码copy一下，新建love.js文件并且将代码复制进去，然后保存。将love.js文件放到路径/themes/next/source/js/src里面，然后打开\themes\next\layout_layout.swig文件,在末尾（在前面引用会出现找不到的bug）添加以下代码：1&lt;script type="text/javascript" src="/js/src/love.js"&gt;&lt;/script&gt; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354! function (e, t, a) &#123; function n() &#123; c(".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"), o(), r() &#125; function r() &#123; for (var e = 0; e &lt; d.length; e++) d[e].alpha &lt;= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y--, d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999"); requestAnimationFrame(r) &#125; function o() &#123; var t = "function" == typeof e.onclick &amp;&amp; e.onclick; e.onclick = e.ontouchstart = function (e) &#123; t &amp;&amp; t(), i(e) &#125; &#125; function i(e) &#123; var a = t.createElement("div"); a.className = "heart", d.push(&#123; el: a, x: e.clientX || e.touches[0].clientX - 5, y: e.clientY || e.touches[0].clientY - 5, scale: 1, alpha: 1, color: s() &#125;), t.body.appendChild(a) console.log(a); &#125; function c(e) &#123; var a = t.createElement("style"); a.type = "text/css"; try &#123; a.appendChild(t.createTextNode(e)) &#125; catch (t) &#123; a.styleSheet.cssText = e &#125; t.getElementsByTagName("head")[0].appendChild(a) &#125; function s() &#123; return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")" &#125; var d = []; e.requestAnimationFrame = function () &#123; return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) &#123; setTimeout(e, 1e3 / 60) &#125; &#125;(), n()&#125;(window, document);]]></content>
+      <categories>
+        <category>花里胡俏</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[beginning]]></title>
-    <url>%2F2018%2F08%2F01%2Fbeginning%2F</url>
-    <content type="text"><![CDATA[上一次服务器挂的时候 丢了一波图片 从那以后文章就真的是干货了 一张图都没有 emmmm 重新搭了一个博客 coding-hexo-next md的语法 先用着吧 不花钱 😜]]></content>
+    <url>%2F2018%2F01%2F01%2Fbeginning%2F</url>
+    <content type="text"><![CDATA[上一次服务器挂的时候 丢了一波图片 从那以后文章就真的是干货了 一张图都没有 emmmm 重新搭了一个博客 coding-hexo-next md的语法 慢慢把之前的东西搬过来 先用着吧 不花钱 😜]]></content>
       <categories>
         <category>记录生活</category>
       </categories>
