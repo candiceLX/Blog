@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="Candice">
 <meta property="og:description" content="经常用 偶尔用 还是想不起来的……">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-13T08:30:21.000Z">
+<meta property="og:updated_time" content="2018-09-14T06:46:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一丢丢的js">
 <meta name="twitter:description" content="经常用 偶尔用 还是想不起来的……">
@@ -391,7 +391,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-13 08:30:21" itemprop="dateModified" datetime="2018-09-13T08:30:21Z">2018-09-13</time>
+                <time title="修改时间：2018-09-14 06:46:41" itemprop="dateModified" datetime="2018-09-14T06:46:41Z">2018-09-14</time>
               
             
           </span>
@@ -427,6 +427,44 @@
 
       
         <h1 id="判断当前设备"><a href="#判断当前设备" class="headerlink" title="判断当前设备"></a>判断当前设备</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 终端是否安卓</span></span><br><span class="line"><span class="built_in">window</span>.isAndroid = navigator.userAgent.indexOf(<span class="string">'Android'</span>) &gt; <span class="number">-1</span> || navigator.userAgent.indexOf(<span class="string">'Adr'</span>) &gt; <span class="number">-1</span>; <span class="comment">//android终端  </span></span><br><span class="line"><span class="comment">// 终端是否IOS</span></span><br><span class="line"><span class="built_in">window</span>.isiOS = !!navigator.userAgent.match(<span class="regexp">/\(i[^;]+;( U;)? CPU.+Mac OS X/</span>); <span class="comment">//ios终端</span></span><br><span class="line"><span class="comment">// 终端是否APP</span></span><br><span class="line"><span class="built_in">window</span>.isApp = (isAndroid || isiOS) &amp;&amp; (<span class="keyword">typeof</span> <span class="built_in">window</span>.webkit !== <span class="string">'undefined'</span> || <span class="keyword">typeof</span> WaveApp !== <span class="string">'undefined'</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="操控数组"><a href="#操控数组" class="headerlink" title="操控数组"></a>操控数组</h1><ul>
+<li><p>filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。 不会对空数组进行检测及改变原始数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ages = [<span class="number">32</span>, <span class="number">33</span>, <span class="number">16</span>, <span class="number">40</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkAdult</span>(<span class="params">age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> age &gt;= <span class="number">18</span>;</span><br><span class="line">&#125;</span><br><span class="line">返回 <span class="number">32</span>,<span class="number">33</span>,<span class="number">40</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sort()  按照数字大小或者字母顺序排序 使用arr.sort()</p>
+</li>
+</ul>
+<h1 id="操控对象"><a href="#操控对象" class="headerlink" title="操控对象"></a>操控对象</h1><h1 id="操控字符串"><a href="#操控字符串" class="headerlink" title="操控字符串"></a>操控字符串</h1><ul>
+<li><p>parseFloat()  如果字符串的第一个字符不能被转换为数字，那么 parseFloat() 会返回 NaN。 整个字符串只返回一个数字</p>
+</li>
+<li><p>num.toString()   String(num) 转字符串</p>
+</li>
+<li><p>indexOf() 检测是否存在某个字符 不存在返回-1 否则返回字符位置</p>
+</li>
+<li><p>replace() 替换字符串如 replace(‘字’,’’)</p>
+</li>
+<li><p>split() 分割字符串 string.split(‘.’)</p>
+</li>
+</ul>
+<h1 id="操控数组-1"><a href="#操控数组-1" class="headerlink" title="操控数组"></a>操控数组</h1><ul>
+<li><p>push() 写入数组，对象等 arr.push（’2’） 对象例：obj.push(obj)</p>
+</li>
+<li><p>join() 方法用于把数组中的所有元素放入一个字符串。</p>
+</li>
+</ul>
+<h1 id="返回各种数字"><a href="#返回各种数字" class="headerlink" title="返回各种数字"></a>返回各种数字</h1><ul>
+<li><p>数学对象Math。 包含了js中一切和数学有关的功能；如：随机数函数 Math.random() 可以产生任意的浮点数</p>
+</li>
+<li><p>Math.round() 四舍五入得出一个最接近的整数 </p>
+</li>
+<li><p>toFixed() 把Number四舍五入为指定小数位数的数字。 num.toFixed(‘2’)</p>
+</li>
+<li><p>isNaN() 判断传入值是否为数字 返回布尔值</p>
+</li>
+<li><p>parseInt(参数) 将字符型的数字转化为数字，去掉小数点只保留整数。</p>
+</li>
+</ul>
+
       
     </div>
 
@@ -647,7 +685,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#判断当前设备"><span class="nav-number">1.</span> <span class="nav-text">判断当前设备</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#判断当前设备"><span class="nav-number">1.</span> <span class="nav-text">判断当前设备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操控数组"><span class="nav-number">2.</span> <span class="nav-text">操控数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操控对象"><span class="nav-number">3.</span> <span class="nav-text">操控对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操控字符串"><span class="nav-number">4.</span> <span class="nav-text">操控字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操控数组-1"><span class="nav-number">5.</span> <span class="nav-text">操控数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#返回各种数字"><span class="nav-number">6.</span> <span class="nav-text">返回各种数字</span></a></li></ol></div>
             
 
           </div>
