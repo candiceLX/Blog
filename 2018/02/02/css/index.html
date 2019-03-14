@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="Candice">
 <meta property="og:description" content="不常用 偶尔用 还常常想不起来的……">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-21T08:46:33.000Z">
+<meta property="og:updated_time" content="2019-02-22T03:06:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一丢丢的css">
 <meta name="twitter:description" content="不常用 偶尔用 还常常想不起来的……">
@@ -391,7 +391,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-21 08:46:33" itemprop="dateModified" datetime="2019-01-21T08:46:33Z">2019-01-21</time>
+                <time title="修改时间：2019-02-22 03:06:35" itemprop="dateModified" datetime="2019-02-22T03:06:35Z">2019-02-22</time>
               
             
           </span>
@@ -437,6 +437,11 @@
 
 </li>
 </ul>
+<h1 id="去掉a标签点击时的背景色！"><a href="#去掉a标签点击时的背景色！" class="headerlink" title="去掉a标签点击时的背景色！"></a>去掉a标签点击时的背景色！</h1><ol>
+<li>取消a标签在移动端点击时的蓝色：<br>-webkit-tap-highlight-color: rgba(255, 255, 255, 0);<br>-webkit-user-select: none;<br>-moz-user-focus: none;<br>-moz-user-select: none;<br>使用图片作为a标签的点击按钮时，当触发touchstart的时候，往往会有一个灰色的背景：<br>a,a:hover,a:active,a:visited,a:link,a:focus{<br>-webkit-tap-highlight-color:rgba(0,0,0,0);<br>-webkit-tap-highlight-color: transparent;<br>outline:none;<br>background: none;<br>text-decoration: none;<br>}</li>
+<li>改变选中内容的背景颜色：<br>::selection {<br>background: #FFF;<br>color: #333;<br>}<br>::-moz-selection {<br>background: #FFF;<br>color: #333;<br>}<br>::-webkit-selection {<br>background: #FFF;<br>color: #333;<br>}</li>
+<li>去除ios input框点击时的灰色背景：<br>-webkit-tap-highlight-color:rgba(0,0,0,0);</li>
+</ol>
 
       
     </div>
@@ -658,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文字类"><span class="nav-number">1.</span> <span class="nav-text">文字类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#背景图"><span class="nav-number">2.</span> <span class="nav-text">背景图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#居中"><span class="nav-number">3.</span> <span class="nav-text">居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#input禁止出现键盘-兼容ios"><span class="nav-number">4.</span> <span class="nav-text">input禁止出现键盘(兼容ios)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文字类"><span class="nav-number">1.</span> <span class="nav-text">文字类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#背景图"><span class="nav-number">2.</span> <span class="nav-text">背景图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#居中"><span class="nav-number">3.</span> <span class="nav-text">居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#input禁止出现键盘-兼容ios"><span class="nav-number">4.</span> <span class="nav-text">input禁止出现键盘(兼容ios)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉a标签点击时的背景色！"><span class="nav-number">5.</span> <span class="nav-text">去掉a标签点击时的背景色！</span></a></li></ol></div>
             
 
           </div>
