@@ -1849,7 +1849,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fffbc8;
+  background: #fae90b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2498,9 +2498,8 @@ hr {
 }
 .header {
   height: 270px;
-   background-size: cover;
+  background-size: cover;
   background-image: url("https://cdn.JsDelivr.net/gh/candiceLX/blog_imgs/2020blog_head.jpg");
- 
 }
 .btn-bar {
   background: #fff;
