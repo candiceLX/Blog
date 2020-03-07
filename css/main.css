@@ -2498,8 +2498,9 @@ hr {
 }
 .header {
   height: 270px;
+   background-size: cover;
   background-image: url("https://cdn.JsDelivr.net/gh/candiceLX/blog_imgs/2020blog_head.jpg");
-  background-size: cover;
+ 
 }
 .btn-bar {
   background: #fff;

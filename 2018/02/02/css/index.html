@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="Candice">
 <meta property="og:description" content="不常用 偶尔用 还常常想不起来的……">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-22T03:06:35.000Z">
+<meta property="og:updated_time" content="2020-03-06T13:34:16.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一丢丢的css">
 <meta name="twitter:description" content="不常用 偶尔用 还常常想不起来的……">
@@ -391,7 +391,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-22 03:06:35" itemprop="dateModified" datetime="2019-02-22T03:06:35Z">2019-02-22</time>
+                <time title="修改时间：2020-03-06 13:34:16" itemprop="dateModified" datetime="2020-03-06T13:34:16Z">2020-03-06</time>
               
             
           </span>
@@ -430,6 +430,14 @@
 <p>自动换行  word-wrap: break-word;<br>         word-break: normal;</p>
 <p>强制英文单词断行    word-break:break-all;</p>
 <p>保留省略号：<br>width: 8em;<br>overflow: hidden;<br>text-overflow: ellipsis;<br>white-space: nowrap;</p>
+<h2 id="css文字两行或者几行显示省略号"><a href="#css文字两行或者几行显示省略号" class="headerlink" title="css文字两行或者几行显示省略号"></a>css文字两行或者几行显示省略号</h2><pre><code>width: 250px;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;　　//这个代表你要在几行显示省略号
+-webkit-box-orient: vertical;
+word-break: break-all; 　//英文还得加这个
+</code></pre><h2 id="文字中间加横线"><a href="#文字中间加横线" class="headerlink" title="文字中间加横线"></a>文字中间加横线</h2><p>text-decoration: line-through;</p>
 <h1 id="背景图"><a href="#背景图" class="headerlink" title="背景图"></a>背景图</h1><p>背景图片靠右对齐，并且间距从右算起<br>可以这样写background:url(“images/test.png”)no-repeat right 10px center; //这样间距从右算起。</p>
 <h1 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h1><p>left: 50%;<br>transform: translateX(-50%);<br>-webkit-transform: translateX(-50%);<br>-moz-transform: translateX(-50%);<br>-ms-transform: translateX(-50%);<br>-o-transform: translateX(-50%);</p>
 <h1 id="input禁止出现键盘-兼容ios"><a href="#input禁止出现键盘-兼容ios" class="headerlink" title="input禁止出现键盘(兼容ios)"></a>input禁止出现键盘(兼容ios)</h1><ul>
@@ -679,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文字类"><span class="nav-number">1.</span> <span class="nav-text">文字类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#背景图"><span class="nav-number">2.</span> <span class="nav-text">背景图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#居中"><span class="nav-number">3.</span> <span class="nav-text">居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#input禁止出现键盘-兼容ios"><span class="nav-number">4.</span> <span class="nav-text">input禁止出现键盘(兼容ios)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉a标签点击时的背景色！"><span class="nav-number">5.</span> <span class="nav-text">去掉a标签点击时的背景色！</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文字类"><span class="nav-number">1.</span> <span class="nav-text">文字类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#css文字两行或者几行显示省略号"><span class="nav-number">1.1.</span> <span class="nav-text">css文字两行或者几行显示省略号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字中间加横线"><span class="nav-number">1.2.</span> <span class="nav-text">文字中间加横线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#背景图"><span class="nav-number">2.</span> <span class="nav-text">背景图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#居中"><span class="nav-number">3.</span> <span class="nav-text">居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#input禁止出现键盘-兼容ios"><span class="nav-number">4.</span> <span class="nav-text">input禁止出现键盘(兼容ios)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉a标签点击时的背景色！"><span class="nav-number">5.</span> <span class="nav-text">去掉a标签点击时的背景色！</span></a></li></ol></div>
             
 
           </div>
