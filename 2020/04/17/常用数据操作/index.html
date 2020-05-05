@@ -107,18 +107,18 @@
 
 
 
- <meta name="description" content="平凡的你的不平凡">
+ <meta name="description" content="数组去重以前的 for+if 已经太老旧了  new Map()通过 filter 过滤  1234function unique(arr) &amp;#123;  const res = new Map();  return arr.filter((a) =&amp;gt; !res.has(a) &amp;amp;&amp;amp; res.set(a, 1));&amp;#125;  new Set()数据类型 可以存储任何数据类">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用数据操作总结">
 <meta property="og:url" content="www.0li.xin/2020/04/17/常用数据操作/index.html">
 <meta property="og:site_name" content="Candice">
-<meta property="og:description" content="平凡的你的不平凡">
+<meta property="og:description" content="数组去重以前的 for+if 已经太老旧了  new Map()通过 filter 过滤  1234function unique(arr) &amp;#123;  const res = new Map();  return arr.filter((a) =&amp;gt; !res.has(a) &amp;amp;&amp;amp; res.set(a, 1));&amp;#125;  new Set()数据类型 可以存储任何数据类">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-17T02:34:43.711Z">
+<meta property="og:updated_time" content="2020-04-17T06:19:35.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用数据操作总结">
-<meta name="twitter:description" content="平凡的你的不平凡">
+<meta name="twitter:description" content="数组去重以前的 for+if 已经太老旧了  new Map()通过 filter 过滤  1234function unique(arr) &amp;#123;  const res = new Map();  return arr.filter((a) =&amp;gt; !res.has(a) &amp;amp;&amp;amp; res.set(a, 1));&amp;#125;  new Set()数据类型 可以存储任何数据类">
 
 
 
@@ -374,7 +374,7 @@
                 
               
 
-              <time title="创建时间：2020-04-17 02:28:37 / 修改时间：02:34:43" itemprop="dateCreated datePublished" datetime="2020-04-17T02:28:37Z">2020-04-17</time>
+              <time title="创建时间：2020-04-17 02:28:37 / 修改时间：06:19:35" itemprop="dateCreated datePublished" datetime="2020-04-17T02:28:37Z">2020-04-17</time>
             
 
             
@@ -412,7 +412,16 @@
       
 
       
-        
+        <h1 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h1><p>以前的 for+if 已经太老旧了</p>
+<ol>
+<li>new Map()通过 filter 过滤</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> res = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">  <span class="keyword">return</span> arr.filter(<span class="function">(<span class="params">a</span>) =&gt;</span> !res.has(a) &amp;&amp; res.set(a, <span class="number">1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>new Set()数据类型 可以存储任何数据类型,并且是唯一的(不重复的值)<br>再通过 Array.from()转化成数组类型</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dedupe</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(array));</span><br><span class="line">&#125;</span><br><span class="line">dedupe([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]); <span class="comment">// [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+<h2 id="数组对象去重"><a href="#数组对象去重" class="headerlink" title="数组对象去重"></a>数组对象去重</h2>
       
     </div>
 
@@ -502,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -626,6 +644,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组去重"><span class="nav-number">1.</span> <span class="nav-text">数组去重</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组对象去重"><span class="nav-number">1.1.</span> <span class="nav-text">数组对象去重</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
