@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="Candice">
 <meta property="og:description" content="看看字符串，和数组有异曲同工之妙，字符串也可以通过split来变成数组，然后使用数组的方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-04T13:56:32.000Z">
+<meta property="og:updated_time" content="2020-09-09T07:33:52.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符串的方法的总结和使用">
 <meta name="twitter:description" content="看看字符串，和数组有异曲同工之妙，字符串也可以通过split来变成数组，然后使用数组的方法。">
@@ -391,7 +391,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-03-04 13:56:32" itemprop="dateModified" datetime="2020-03-04T13:56:32Z">2020-03-04</time>
+                <time title="修改时间：2020-09-09 07:33:52" itemprop="dateModified" datetime="2020-09-09T07:33:52Z">2020-09-09</time>
               
             
           </span>
@@ -691,7 +691,17 @@
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare" target="_blank" rel="noopener">localeCompare方法，十分建议看看MDN</a>，因为我实在太菜了 ┭┮﹏┭┮</p>
 </blockquote>
 <p>当比较大量字符串时， 比如比较大量数组时， 最好创建一个 <code>[Intl.Collator](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator)</code> 对象并使用compare 属性所提供的函数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Intl.Collator 是用于语言敏感字符串比较的 collators构造函数。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">letterSort</span>(<span class="params">lang, letters</span>) </span>&#123;</span><br><span class="line">  letters.sort(<span class="keyword">new</span> <span class="built_in">Intl</span>.Collator(lang).compare)</span><br><span class="line">  <span class="keyword">return</span> letters;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 具体请看上面 MDN 的说明</span></span><br><span class="line"><span class="built_in">console</span>.log(letterSort(<span class="string">'de'</span>, [<span class="string">'a'</span>,<span class="string">'z'</span>,<span class="string">'ä'</span>])) <span class="comment">// ["a", "ä", "z"]</span></span><br><span class="line"><span class="built_in">console</span>.log(letterSort(<span class="string">'sv'</span>, [<span class="string">'a'</span>,<span class="string">'z'</span>,<span class="string">'ä'</span>])) <span class="comment">// ["a", "z", "ä"]</span></span><br></pre></td></tr></table></figure>
+<pre><code class="javascript"><span class="comment">// Intl.Collator 是用于语言敏感字符串比较的 collators构造函数。</span>
+<span class="function"><span class="keyword">function</span> <span class="title">letterSort</span>(<span class="params">lang, letters</span>) </span>{
+<span class="number">21</span><span class="string">`</span>
+<span class="string"> letters.sort(new Intl.Collator(lang).compare)/. mnbyutrr ;l'/01</span>
+<span class="string">  return letters;</span>
+<span class="string">}</span>
+<span class="string"></span>
+<span class="string">// 具体请看上面 MDN 的说明</span>
+<span class="string">console.log(letterSort('de', ['a','z','ä'])) // ["a", "ä", "z"]</span>
+<span class="string">console.log(letterSort('sv', ['a','z','ä'])) // ["a", "z", "ä"]</span>
+</code></pre>
 <h1 id="文中某些知识点参考链接"><a href="#文中某些知识点参考链接" class="headerlink" title="文中某些知识点参考链接"></a>文中某些知识点参考链接</h1><p><a href="http://es6.ruanyifeng.com/#docs/string" target="_blank" rel="noopener">阮老师的es6入门，字符串的扩展 推荐！</a></p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare" target="_blank" rel="noopener">localeCompare方法，十分建议看看MDN</a></p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator" target="_blank" rel="noopener">Intl.Collator</a></p>
@@ -817,7 +827,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

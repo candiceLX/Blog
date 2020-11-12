@@ -27,7 +27,7 @@
       alpha: 1,
       color: s()
     }), t.body.appendChild(a)
-    console.log(a);
+    // console.log(a);
 
   }
 
